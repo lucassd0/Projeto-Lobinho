@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="adotarlobinho.css">
+    <title>Adotar Lobinho</title>
+</head>
+<body>
+    <header>
+        <a class="underline_animation" href="lista.html">Nossos Lobinhos</a>
+        <img src="./Imagens/lobinho_logo.svg">
+        <a href="quemsomos.html" class="underline_animation">Quem Somos</a>
+    </header>
+    <main>
+        <div class="container">
+            <div class="first_layer">
+                <div class="img_lobo"></div>
+                <div>
+                    <h1 class="nome_lobo"></h1>
+                    <h3 class="lobo_id"></h3>
+                </div>
+            </div>
+            <div class="second_layer">
+                <div class="up_form">
+                    <div id="nome">
+                        <label>Seu nome:</label>
+                        <input class="input_nome" type="text">
+                    </div>
+                    <div id="idade">
+                        <label>Idade:</label>
+                        <input class="input_idade" type="text">
+                    </div>
+                </div>
+                <div id="email">
+                    <label>E-mail:</label>
+                    <input class="input_email" type="text">
+                </div>
+            </div>
+            <button class="btn_adotar">Adotar</button>
+        </div>
+    </main>
+    <div class="rgb_line"></div>
+    <footer>
+        <div class="contato">
+            <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.188589715595!2d-43.135424285400426!3d-22.906413843615656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1673552685635!5m2!1spt-BR!2sbr'></iframe>
+            <div class="contato_layer">
+                <p id="endereco">Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ, 24210-315</p>
+                <p id="numero">(99) 99999-9999</p>
+                <p id="email">salve-lobos@lobINhos.com</p>
+                <a href="quemsomos.html">
+                    <button>Quem somos</button>
+                </a>
+            </div>
+        </div>
+        <div class="footer_right">
+            <label>Desenvolvido com</label>
+            <img src="./Imagens/paws.png">
+        </div>
+    </footer>
+    <script type="module" src="adotarlobinho.js"></script>
+</body>
+</html>

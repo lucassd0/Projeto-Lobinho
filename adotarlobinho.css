@@ -1,0 +1,328 @@
+@font-face {
+    font-family: Grotesque-Bold;
+    src: url(./Fontes/DarkerGrotesque-Bold.ttf);
+}
+
+@font-face {
+    font-family: Grotesque-Regular;
+    src: url(./Fontes/DarkerGrotesque-Regular.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #85CDF5;
+    width: 100%;
+    height: 130px;
+}
+
+header > a {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 15px;
+    font-family: Grotesque-Bold;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+header > a:hover {
+    cursor: pointer;
+}
+
+
+.underline_animation::after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #110000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        justify-content: none;
+        gap: 30px;
+    }
+    header > a {
+        line-height: 25px;
+        text-align: center;
+    }
+}
+
+.rgb_line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, #134dbb 0%, #cc6f4b 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.first_layer {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 100px;
+    gap: 30px;
+}
+
+.nome_lobo {
+    font-size: 70px;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    margin-bottom: 25px;
+    text-align: start;
+}
+
+.lobo_id {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    text-align: start;
+    margin-left: 4px;
+}
+
+#nome, #idade, #email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#nome, #idade, #email > label {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Grotesque-Regular;
+}
+
+#nome > input {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 45rem;
+    border: 1px solid #000;
+    padding: 5px;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #000;
+}
+
+#idade > input {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 3rem;
+    border: 1px solid #000;
+    padding: 5px;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #000;
+}
+
+#email > input {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #000;
+    padding: 5px;
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #000;
+}
+
+.second_layer {
+    display: flex;
+    min-width: 78%;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.up_form {
+    display: flex;
+    gap: 10px;
+}
+
+.img_lobo {
+    display: flex;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.btn_adotar {
+    background: #2C5680;
+    padding: 15px 45px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn_adotar:hover {
+    background-color: #2c5680e8;
+}
+
+@media only screen and (max-width: 820px) {
+    .first_layer {
+        flex-direction: column;
+        align-self: center;
+        margin-left: 0;
+
+    }
+
+    .second_layer {
+        gap: 10px;
+    }
+
+    .img_lobo {
+        min-width: 350px;
+        min-height: 350px;
+    }
+
+    .up_form {
+        flex-direction: column-reverse;
+    }
+
+    #nome > input {
+        width: 20rem;
+    }
+
+    #idade > input {
+        width: 3rem;
+    }
+
+    #email > input {
+        width: 20rem;
+    }
+
+    main {
+        padding-bottom: 50px;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contato {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+
+.contato > iframe {
+    width: 15em;
+    height: 168px;
+}
+
+.contato {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.contato_layer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato_layer > p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+    width: 346px;
+    line-height: 15px;
+    text-align: start;
+    user-select: none;
+}
+
+#endereco::before {
+    content: url("./Imagens/endereco.svg");
+    padding: 5px;
+}
+
+#numero::before {
+    content: url("./Imagens/telefone.svg");
+    padding: 5px;
+}
+
+#email::before {
+    content: url("./Imagens/email.svg");
+    padding: 5px;
+}
+
+.contato_layer > a {
+    text-decoration: none;
+    width: 144px;
+    height: 30px;
+}
+
+.contato_layer > a > button {
+    background: #DEB959;
+    width: 144px;
+    height: 30px;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    display: flex;
+    line-height: 20px;
+    color: #353535;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_right > label {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+}

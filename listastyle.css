@@ -1,0 +1,398 @@
+@font-face {
+    font-family: Grotesque-Bold;
+    src: url(./Fontes/DarkerGrotesque-Bold.ttf);
+}
+
+@font-face {
+    font-family: Grotesque-Regular;
+    src: url(./Fontes/DarkerGrotesque-Regular.ttf);
+}
+
+html, body {
+    width: 100%;
+    font-family: Grotesque-Bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #85CDF5;
+    width: 100%;
+    height: 130px;
+}
+
+header > a {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 15px;
+    font-family: Grotesque-Bold;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+header > a:hover {
+    cursor: pointer;
+}
+
+
+.underline_animation::after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #110000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        justify-content: none;
+        gap: 30px;
+    }
+    header > a {
+        line-height: 25px;
+        text-align: center;
+    }
+}
+
+/*seção*/
+.secaoPesquisa{
+    display:flex;
+    padding:33px 70px 33px 70px;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.pesquisaContent{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+
+}
+
+#filtroNome{
+    display: flex;
+    
+}
+#txtFiltro{
+        font-size: 2em;
+        font-family: Grotesque-Bold;
+        height: 47px;
+        width: 80%;
+
+}
+
+
+#containerAddLobo{
+    display: flex;
+    height: 47px;
+    display: flex;
+    color:white;
+    background-color: #DEB959;
+    align-items: center;
+}
+
+#addlobinho{
+    flex: none;
+    color:white;
+    font-size:1.7em;
+    padding:13px 13px 13px 13px;
+    text-decoration: none;
+}
+
+/*lista*/
+
+.listaAtual{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 45px 90px 100px 90px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card_lobo {
+    display: flex;
+    gap: 80px;
+    padding: 10px 0px 50px;
+}
+
+.lobo_imagem {
+    display: flex;
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#left_card > .lobo_imagem {
+    box-shadow: -35px -35px #2C5680, -35px -35px 0px 4px #000;
+}
+
+#right_card > .lobo_imagem {
+    box-shadow: 35px -35px #2C5680, 35px -35px 0px 4px #000;
+}
+
+.dados_lobo {
+    display: flex;
+    flex-direction: column;
+}
+
+#left_card > .dados_lobo > h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#left_card > .dados_lobo > h4 {
+    font-size:1.5em;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#left_card > .dados_lobo > p {
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    width: 100%;
+    max-width: 450px;
+
+}
+
+#right_card > .dados_lobo > h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    width: 100%;
+    text-align: end;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#right_card > .dados_lobo > h4 {
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    width: 100%;
+    text-align: end;
+    margin-bottom: 25px;
+}
+
+#right_card > .dados_lobo > p {
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    width: 100%;
+    max-width: 300px;
+    text-align: end;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .secaoPesquisa{
+        display:flex;
+        padding:33px 20px 10px 20px;
+        gap: 20px;
+        justify-content: space-around;
+    
+    }
+    
+    .pesquisaContent{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        
+    
+    }
+    
+    
+    .listaAtual{
+        align-content: center;
+    }
+    
+    .lobo_imagem {
+        box-shadow: -15px -15px #2C5680, -15px -15px 0px 4px #000;
+        min-width: 7rem;
+        max-width: 15rem;
+        min-height: 7rem;
+        max-width: 15rem;
+        margin: 30px;
+    }
+    .card_lobo {
+        display: flex;
+        flex-direction: column;
+    }
+    #left_card {
+        display: flex;
+        flex-flow: column;
+        gap: 60px;
+        align-items: center;
+
+    }
+    #right_card {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 60px;
+        align-items: center;
+    }
+    #right_card > .dados_lobo>h3 {
+        text-align: left;
+    }
+
+    #right_card > .dados_lobo>h4 {
+        text-align: left;
+    }
+    
+
+    #left_card > .dados_lobo>h3,h4 {
+        text-align: left;
+    }
+
+    #left_card > .dados_lobo>h4 {
+        text-align: left;
+    }
+
+
+
+    #left_card > .lobo_imagem {
+        box-shadow: -10px -15px #2C5680, -10px -15px 0px 4px #000;
+    }
+    
+    #right_card > .lobo_imagem {
+        box-shadow: 10px -15px #2C5680, 10px -15px 0px 4px #000;
+    }
+
+    #right_card > .dados_lobo > p {
+        text-align: start;
+        max-width: 200rem;
+}
+}
+
+ 
+
+/*footer*/
+
+.rgb_line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, #134dbb 0%, #cc6f4b 100%);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contato {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+
+.contato > iframe {
+    width: 15em;
+    height: 168px;
+}
+
+.contato {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.contato_layer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato_layer > p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+    width: 346px;
+    line-height: 15px;
+    text-align: start;
+    user-select: none;
+}
+
+#endereco::before {
+    content: url("./Imagens/endereco.svg");
+    padding: 5px;
+}
+
+#numero::before {
+    content: url("./Imagens/telefone.svg");
+    padding: 5px;
+}
+
+#email::before {
+    content: url("./Imagens/email.svg");
+    padding: 5px;
+}
+
+.contato_layer > a {
+    text-decoration: none;
+    width: 144px;
+    height: 30px;
+}
+
+.contato_layer > a > button {
+    background: #DEB959;
+    width: 144px;
+    height: 30px;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    display: flex;
+    line-height: 20px;
+    color: #353535;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_right > label {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+}

@@ -1,0 +1,223 @@
+@font-face {
+    font-family: Grotesque-Bold;
+    src: url(./Fontes/DarkerGrotesque-Bold.ttf);
+}
+
+@font-face {
+    font-family: Grotesque-Regular;
+    src: url(./Fontes/DarkerGrotesque-Regular.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #85CDF5;
+    width: 100%;
+    height: 130px;
+}
+
+header > a {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 15px;
+    font-family: Grotesque-Bold;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+header > a:hover {
+    cursor: pointer;
+}
+
+
+.underline_animation::after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #110000;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        justify-content: none;
+        gap: 30px;
+    }
+    header > a {
+        line-height: 25px;
+        text-align: center;
+    }
+}
+
+main {
+    display: block;
+    min-width: 250px;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    height: calc(100% - 343px);
+
+}
+
+.container-quemsomos {
+    height: 100%;
+}
+
+.container-quemsomos h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    font-size: 3em;
+    text-align: center;
+    padding: 1.2em 0;
+    font-weight: bolder;
+    user-select: none;
+}
+
+.container-quemsomos p{
+    font-family: 'Grotesque-Regular';
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 50%;
+    margin-left: 16%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    user-select: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: auto;
+    }
+}
+
+.rgb_line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, #134dbb 0%, #cc6f4b 100%);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    justify-content: space-around;
+    width: 100%;
+    gap: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contato {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+
+.contato > iframe {
+    width: 15em;
+    height: 168px;
+}
+
+.contato {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.contato_layer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato_layer > p {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+    width: 346px;
+    line-height: 15px;
+    text-align: start;
+    user-select: none;
+}
+
+#endereco::before {
+    content: url("./Imagens/endereco.svg");
+    padding: 5px;
+}
+
+#numero::before {
+    content: url("./Imagens/telefone.svg");
+    padding: 5px;
+}
+
+#email::before {
+    content: url("./Imagens/email.svg");
+    padding: 5px;
+}
+
+.contato_layer > a {
+    text-decoration: none;
+    width: 144px;
+    height: 30px;
+}
+
+.contato_layer > a > button {
+    background: #DEB959;
+    width: 144px;
+    height: 30px;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Grotesque-Bold;
+    display: flex;
+    line-height: 20px;
+    color: #353535;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_right > label {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Grotesque-Regular;
+    color: white;
+}
